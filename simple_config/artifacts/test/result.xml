@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?><testsuites><testsuite name="SimpleMojitModelFoo user tests" tests="1" failures="0" time="0"><testcase name="test mojit model" time="0"></testcase></testsuite><testsuite name="SimpleMojit index binder tests" tests="1" failures="0" time="0.002"><testcase name="TODO: test update id" time="0.002"></testcase></testsuite><testsuite name="SimpleMojit user tests" tests="1" failures="1" time="0"><testcase name="test mojit" time="0"><failure message="Values should be the same.
+Expected: {&quot;x&quot;:&quot;y&quot;} (string)
+Actual: [object Object] (object)"><![CDATA[Values should be the same.
+Expected: {"x":"y"} (string)
+Actual: [object Object] (object)]]></failure></testcase></testsuite></testsuites>
