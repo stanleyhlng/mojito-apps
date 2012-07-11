@@ -1,0 +1,17 @@
+[
+    {
+        "settings": [ "master" ],
+        "appPort": 8666,
+        "specs": {
+            "hello": {
+                "type": "HelloMojit"
+            }
+        }
+    },
+    {
+        "settings": [ "environment:development" ],
+        "staticHandling": {
+            "forceUpdate": true
+        }
+    }
+]
