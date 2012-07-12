@@ -3,7 +3,7 @@
         "settings": [ "master" ],
         "appPort": 8666,
         "specs": {
-            "base-layout": {
+            "site-layout": {
                 "config": {
                     "assets": {
                         "top": {
@@ -16,6 +16,7 @@
                         },
                         "bottom": {
                             "js": [
+                                "/static/responsive_site/assets/js/jquery.js",
                                 "/static/responsive_site/assets/js/site.js"
                             ]
                         }
@@ -24,8 +25,30 @@
                 },
                 "type": "Microframe"
             },
+            "toolbar-layout": {
+                "config": {
+                    "assets": {
+                        "top": {
+                            "css": [
+                                "/static/responsive_site/assets/css/reset.css",
+                                "/static/responsive_site/assets/css/bootstrap.css",
+                                "/static/responsive_site/assets/css/toolbar.css",
+                                "/static/responsive_site/assets/css/toolbar-responsive.css"
+                            ]
+                        },
+                        "bottom": {
+                            "js": [
+                                "/static/responsive_site/assets/js/jquery.js",
+                                "/static/responsive_site/assets/js/toolbar.js"
+                            ]
+                        }
+                    },
+                    "deploy": true
+                },
+                "type": "Microframe"
+            },
             "home-page": {
-                "base": "base-layout",
+                "base": "site-layout",
                 "config": {
                     "title": "Home | Mojito Apps | Prototype",
                     "child": {
@@ -70,11 +93,76 @@
                 }
             },
             "about-page": {
-                "base": "base-layout",
+                "base": "site-layout",
                 "config": {
                     "title": "About | Mojito Apps | Prototype",
                     "child": {
+                        "config": {
+                            "children": {
+                                "content-element": {
+                                    "type": "ContentElementMojit"
+                                },
+                                "footer-element": {
+                                    "config": {
+                                        "children": {
+                                            "copyright-element": {
+                                                "type": "CopyrightElementMojit"
+                                            }
+                                        }
+                                    },
+                                    "type": "FooterElementMojit"
+                                },
+                                "header-element": {
+                                    "config": {
+                                        "children": {
+                                            "logo-element": {
+                                                "type": "LogoElementMojit"
+                                            },
+                                            "navigation-element": {
+                                                "type": "NavigationElementMojit"
+                                            },
+                                            "tagline-element": {
+                                                "type": "TaglineElementMojit"
+                                            }
+                                        }
+                                    },
+                                    "type": "HeaderElementMojit"
+                                },
+                                "sidebar-element": {
+                                    "type": "SidebarElementMojit"
+                                }
+                            }
+                        },
                         "type": "AboutPageMojit"
+                    }
+                }
+            },
+            "external-page": {
+                "base": "toolbar-layout",
+                "config": {
+                    "title": "External | Mojito Apps | Prototype",
+                    "child": {
+                        "config": {
+                            "children": {
+                                "toolbar-element": {
+                                    "config": {
+                                        "children": { 
+                                            "logo-element": {
+                                                "type": "LogoElementMojit"
+                                            },
+                                            "navigation-element": {
+                                                "type": "NavigationElementMojit"
+                                            }
+                                        }
+                                    },
+                                    "type": "ToolbarElementMojit"
+                                },
+                                "frame-element": {
+                                    "type": "FrameElementMojit"
+                                }
+                            }
+                        },
+                        "type": "ExternalPageMojit"
                     }
                 }
             }

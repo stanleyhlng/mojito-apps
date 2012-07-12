@@ -21,6 +21,13 @@ a:hover {
     padding: 5px;
     width: 960px;
 }
+#pagewrap.external {
+    border: 0 solid blue;
+
+    margin: 0;
+    padding: 0;
+    width: auto;
+}
 #header {
     border: 1px solid red;
 
@@ -112,4 +119,3 @@ a:hover {
     line-height: 1.4em;;
     padding: 10px 0;
 }
-

@@ -1,0 +1,54 @@
+html {
+    background: #f5f5f5 url('../img/pattern-4.png') repeat left top;
+    overflow: hidden;
+}
+body {
+    margin: 0;
+    padding: 0;
+    color: #333333;
+    font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+}
+a {
+    color: #EEEEEE;
+    text-decoration: none;
+}
+a:hover {
+    text-decoration: underline;
+}
+iframe {
+    border-width: 0;
+    height: 100%;
+    width: 100%;
+}
+#frame {
+    display: none;
+    height: 100%;
+    margin: -1px;
+    overflow: hidden;
+    width: 100%;
+}
+#toolbar {
+    height: 40px;
+    overflow: hidden;
+    background-color: #ED145B;
+    border-bottom: 1px solid #888888;
+    margin-bottom: 1px;
+}
+.logo {
+    border: 1px solid green;
+    display: inline-block;
+    color: #EEEEEE;
+    float: left;
+    padding: 0 10px;
+    height: 100%;
+}
+.navigation {
+    border: 1px solid green;
+    display: inline-block;  
+    float: right;
+    height: 100%;
+}
+.navigation li {
+    float: left;
+    padding: 10px;
+}
