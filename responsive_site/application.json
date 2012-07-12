@@ -3,18 +3,43 @@
         "settings": [ "master" ],
         "appPort": 8666,
         "specs": {
-            "base": {
-                "type": "Microframe",
+            "base-page": {
                 "config": {
-                    "title": "base | mojito | prototype"
-                }
+                    "assets": {
+                        "top": {
+                            "css": [
+                                "/static/responsive_site/assets/css/reset.css",
+                                "/static/responsive_site/assets/css/bootstrap.css",
+                                "/static/responsive_site/assets/css/site.css",
+                                "/static/responsive_site/assets/css/site-responsive.css"
+                            ]
+                        }
+                    },
+                    "deploy": true
+                },
+                "type": "Microframe"
             },
             "home-page": {
-                "type": "HomePageMojit"
+                "base": "base-page",
+                "config": {
+                    "title": "Home | Mojito Apps | Prototype",
+                    "child": {
+                        "type": "HomePageMojit"
+                    }
+                }
             },
             "about-page": {
-                "type": "AboutPageMojit"
+                "base": "base-page",
+                "config": {
+                    "title": "About | Mojito Apps | Prototype",
+                    "child": {
+                        "type": "AboutPageMojit"
+                    }
+                }
             }
+        },
+        "staticHandling": {
+            "appName": "responsive_site"
         }
     },
     {
