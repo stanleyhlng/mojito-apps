@@ -35,9 +35,29 @@
                                     "type": "ContentElementMojit"
                                 },
                                 "footer-element": {
+                                    "config": {
+                                        "children": {
+                                            "copyright-element": {
+                                                "type": "CopyrightElementMojit"
+                                            }
+                                        }
+                                    },
                                     "type": "FooterElementMojit"
                                 },
                                 "header-element": {
+                                    "config": {
+                                        "children": {
+                                            "logo-element": {
+                                                "type": "LogoElementMojit"
+                                            },
+                                            "navigation-element": {
+                                                "type": "NavigationElementMojit"
+                                            },
+                                            "tagline-element": {
+                                                "type": "TaglineElementMojit"
+                                            }
+                                        }
+                                    },
                                     "type": "HeaderElementMojit"
                                 },
                                 "sidebar-element": {
@@ -50,7 +70,7 @@
                 }
             },
             "about-page": {
-                "base": "base-page",
+                "base": "base-layout",
                 "config": {
                     "title": "About | Mojito Apps | Prototype",
                     "child": {

@@ -14,5 +14,10 @@
         "verbs": ["get"],
         "path": "/about",
         "call": "about-page.index"
+    },
+    "external-route": {
+        "verbs": ["get"],
+        "path": "/external",
+        "call": "external-page.index"
     }
 }]
