@@ -35,6 +35,10 @@ YUI.add('AboutPageMojit', function(Y, NAME) {
                     return;
                 }
                 ac.assets.addCss('./index.css');
+                
+                data.mojito = {};
+                data.mojito.mojit = "AboutPageMojit";
+
                 ac.done({
                     status: 'mojit: AboutPageMojit',
                     data: data
