@@ -34,14 +34,66 @@ YUI.add('NavigationElementMojit', function(Y, NAME) {
                     ac.error(err);
                     return;
                 }
-                ac.assets.addCss('./index.css');
+
+                var path = ac.http.getRequest().url;
+                console.log( path );
+
                 ac.done({
                     status: 'Mojito is working.',
-                    data: data
+                    data: get_data(ac) 
                 });
             });
-        }
+        },
 
     };
+
+
+    function  get_data(ac) {
+        var data = {};
+
+        var routes = {};
+        routes['home'] = ac.url.make( 'home-page', 'index' );
+        routes['about'] = ac.url.make( 'about-page', 'index' );
+        routes['external'] = ac.url.make( 'external-page', 'index' );
+
+        var path = ac.http.getRequest().url;
+        if ( path === routes['external'] ) {
+
+            // navigation: external
+            data.current_path = path;
+
+            data.items = [];
+            
+            data.items.push({
+                'markup': '<li><a href="http://www.responsivewebdesign.co.uk/" target="_blank">http://www.responsivewebdesign.co.uk/</a></li>'
+            });
+
+            data.items.push({
+                'markup': '<li><a href="/"><i class="icon-remove icon-white"></i></a></li>'
+            });
+
+        } else {
+
+            // navigation: site 
+            data.current_path = path;
+            
+            data.items = [];
+            Object.keys( routes ).forEach( function( n ) {
+                if ( path === routes[n] ) {
+                    active = "active";
+                } else {
+                    active = "";
+                }
+                data.items.push({
+                    'markup': '<li class="' + active + '"><a href="' + routes[n] + '">' + n + '</a></li>'
+                });
+            } );
+        }
+
+Y.log( data, "debug" );
+
+        return data;
+
+    }
 
 }, '0.0.1', {requires: ['mojito', 'NavigationElementMojitModelFoo']});

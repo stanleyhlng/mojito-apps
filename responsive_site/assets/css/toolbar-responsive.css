@@ -6,10 +6,10 @@
 /* for 700px or less */
 @media screen and (max-width: 700px) {
     
-    .action {
+    .navigation {
         font-size: 0.8em;
     }
-    .action li {
+    .navigation li {
         padding-left: 5px;
         padding-right: 5px;
     }
