@@ -1,0 +1,8 @@
+[{
+    "settings": [ "master" ],
+    "index-route": {
+        "verbs": ["get"],
+        "path": "/",
+        "call": "index-controller.index"
+    }
+}]

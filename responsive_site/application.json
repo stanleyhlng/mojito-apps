@@ -1,0 +1,20 @@
+[
+    {
+        "settings": [ "master" ],
+        "appPort": 8666,
+        "specs": {
+            "base": {
+                "type": "Microframe"
+                "config": {
+                    "title": "Responsive Site | mojito | prototype | demo.stanleyhlng.com"
+                }
+            }
+        }
+    },
+    {
+        "settings": [ "environment:development" ],
+        "staticHandling": {
+            "forceUpdate": true
+        }
+    }
+]
