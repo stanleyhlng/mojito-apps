@@ -13,6 +13,11 @@
                                 "/static/responsive_site/assets/css/site.css",
                                 "/static/responsive_site/assets/css/site-responsive.css"
                             ]
+                        },
+                        "bottom": {
+                            "js": [
+                                "/static/responsive_site/assets/js/site.js"
+                            ]
                         }
                     },
                     "deploy": true
