@@ -2,12 +2,12 @@
  * Copyright (c) 2012 Yahoo! Inc. All rights reserved.
  */
 /*jslint anon:true, sloppy:true, nomen:true*/
-YUI.add('HomePageMojit', function(Y, NAME) {
+YUI.add('ContentElementMojit', function(Y, NAME) {
 
 /**
- * The HomePageMojit module.
+ * The ContentElementMojit module.
  *
- * @module HomePageMojit
+ * @module ContentElementMojit
  */
 
     /**
@@ -29,22 +29,19 @@ YUI.add('HomePageMojit', function(Y, NAME) {
          *        to the Mojito API.
          */
         index: function(ac) {
-            ac.models.HomePageMojitModelFoo.getData(function(err, data) {
+            ac.models.ContentElementMojitModelFoo.getData(function(err, data) {
                 if (err) {
                     ac.error(err);
                     return;
                 }
-                /*
                 ac.assets.addCss('./index.css');
                 ac.done({
-                    status: 'mojit: HomePageMojit',
+                    status: 'Mojito is working.',
                     data: data
                 });
-                */
-                ac.composite.done();
             });
         }
 
     };
 
-}, '0.0.1', {requires: ['mojito', 'HomePageMojitModelFoo']});
+}, '0.0.1', {requires: ['mojito', 'ContentElementMojitModelFoo']});

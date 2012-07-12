@@ -3,7 +3,7 @@
         "settings": [ "master" ],
         "appPort": 8666,
         "specs": {
-            "base-page": {
+            "base-layout": {
                 "config": {
                     "assets": {
                         "top": {
@@ -25,10 +25,26 @@
                 "type": "Microframe"
             },
             "home-page": {
-                "base": "base-page",
+                "base": "base-layout",
                 "config": {
                     "title": "Home | Mojito Apps | Prototype",
                     "child": {
+                        "config": {
+                            "children": {
+                                "content-element": {
+                                    "type": "ContentElementMojit"
+                                },
+                                "footer-element": {
+                                    "type": "FooterElementMojit"
+                                },
+                                "header-element": {
+                                    "type": "HeaderElementMojit"
+                                },
+                                "sidebar-element": {
+                                    "type": "SidebarElementMojit"
+                                }
+                            }
+                        },
                         "type": "HomePageMojit"
                     }
                 }
