@@ -9,8 +9,8 @@
                     "title": "base | mojito | prototype"
                 }
             },
-            "home": {
-                "type": "HomeMojit"
+            "home-page": {
+                "type": "HomePageMojit"
             }
         }
     },

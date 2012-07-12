@@ -3,6 +3,6 @@
     "index-route": {
         "verbs": ["get"],
         "path": "/",
-        "call": "home.index"
+        "call": "home-page.index"
     }
 }]
