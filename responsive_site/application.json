@@ -11,6 +11,9 @@
             },
             "home-page": {
                 "type": "HomePageMojit"
+            },
+            "about-page": {
+                "type": "AboutPageMojit"
             }
         }
     },

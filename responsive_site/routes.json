@@ -1,8 +1,18 @@
 [{
     "settings": [ "master" ],
-    "index-route": {
+    "default-route": {
         "verbs": ["get"],
         "path": "/",
         "call": "home-page.index"
+    },
+    "home-route": {
+        "verbs": ["get"],
+        "path": "/home",
+        "call": "home-page.index"
+    },
+    "about-route": {
+        "verbs": ["get"],
+        "path": "/about",
+        "call": "about-page.index"
     }
 }]
