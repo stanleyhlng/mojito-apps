@@ -4,10 +4,13 @@
         "appPort": 8666,
         "specs": {
             "base": {
-                "type": "Microframe"
+                "type": "Microframe",
                 "config": {
-                    "title": "Responsive Site | mojito | prototype | demo.stanleyhlng.com"
+                    "title": "base | mojito | prototype"
                 }
+            },
+            "home": {
+                "type": "HomeMojit"
             }
         }
     },

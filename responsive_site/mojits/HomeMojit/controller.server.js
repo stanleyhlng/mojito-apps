@@ -2,12 +2,12 @@
  * Copyright (c) 2012 Yahoo! Inc. All rights reserved.
  */
 /*jslint anon:true, sloppy:true, nomen:true*/
-YUI.add('IndexMojit', function(Y, NAME) {
+YUI.add('HomeMojit', function(Y, NAME) {
 
 /**
- * The IndexMojit module.
+ * The HomeMojit module.
  *
- * @module IndexMojit
+ * @module HomeMojit
  */
 
     /**
@@ -29,14 +29,14 @@ YUI.add('IndexMojit', function(Y, NAME) {
          *        to the Mojito API.
          */
         index: function(ac) {
-            ac.models.IndexMojitModelFoo.getData(function(err, data) {
+            ac.models.HomeMojitModelFoo.getData(function(err, data) {
                 if (err) {
                     ac.error(err);
                     return;
                 }
                 ac.assets.addCss('./index.css');
                 ac.done({
-                    status: 'Mojito is working.',
+                    status: 'mojit: HomeMojit',
                     data: data
                 });
             });
@@ -44,4 +44,4 @@ YUI.add('IndexMojit', function(Y, NAME) {
 
     };
 
-}, '0.0.1', {requires: ['mojito', 'IndexMojitModelFoo']});
+}, '0.0.1', {requires: ['mojito', 'HomeMojitModelFoo']});

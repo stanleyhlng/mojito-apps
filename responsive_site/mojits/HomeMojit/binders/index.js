@@ -2,18 +2,18 @@
  * Copyright (c) 2012 Yahoo! Inc. All rights reserved.
  */
 /*jslint anon:true, sloppy:true, nomen:true*/
-YUI.add('IndexMojitBinderIndex', function(Y, NAME) {
+YUI.add('HomeMojitBinderIndex', function(Y, NAME) {
 
 /**
- * The IndexMojitBinderIndex module.
+ * The HomeMojitBinderIndex module.
  *
- * @module IndexMojitBinderIndex
+ * @module HomeMojitBinderIndex
  */
 
     /**
-     * Constructor for the IndexMojitBinderIndex class.
+     * Constructor for the HomeMojitBinderIndex class.
      *
-     * @class IndexMojitBinderIndex
+     * @class HomeMojitBinderIndex
      * @constructor
      */
     Y.namespace('mojito.binders')[NAME] = {

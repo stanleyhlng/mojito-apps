@@ -2,18 +2,18 @@
  * Copyright (c) 2012 Yahoo! Inc. All rights reserved.
  */
 /*jslint anon:true, sloppy:true, nomen:true*/
-YUI.add('IndexMojitModelFoo', function(Y, NAME) {
+YUI.add('HomeMojitModelFoo', function(Y, NAME) {
 
 /**
- * The IndexMojitModelFoo module.
+ * The HomeMojitModelFoo module.
  *
- * @module IndexMojit
+ * @module HomeMojit
  */
 
     /**
-     * Constructor for the IndexMojitModelFoo class.
+     * Constructor for the HomeMojitModelFoo class.
      *
-     * @class IndexMojitModelFoo
+     * @class HomeMojitModelFoo
      * @constructor
      */
     Y.mojito.models[NAME] = {

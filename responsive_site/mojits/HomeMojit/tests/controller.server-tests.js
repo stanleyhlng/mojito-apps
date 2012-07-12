@@ -2,18 +2,18 @@
  * Copyright (c) 2012 Yahoo! Inc. All rights reserved.
  */
 
-YUI.add('IndexMojit-tests', function(Y) {
+YUI.add('HomeMojit-tests', function(Y) {
 
-    var suite = new YUITest.TestSuite('IndexMojit-tests'),
+    var suite = new YUITest.TestSuite('HomeMojit-tests'),
         controller = null,
         A = YUITest.Assert;
     
     suite.add(new YUITest.TestCase({
         
-        name: 'IndexMojit user tests',
+        name: 'HomeMojit user tests',
         
         setUp: function() {
-            controller = Y.mojito.controllers.IndexMojit;
+            controller = Y.mojito.controllers.HomeMojit;
         },
         tearDown: function() {
             controller = null;
@@ -32,7 +32,7 @@ YUI.add('IndexMojit-tests', function(Y) {
                     }
                 },
                 models: {
-                    IndexMojitModelFoo: {
+                    HomeMojitModelFoo: {
                         getData: function(cb) {
                             cb(null, modelData);
                         }
@@ -57,4 +57,4 @@ YUI.add('IndexMojit-tests', function(Y) {
     
     YUITest.TestRunner.add(suite);
     
-}, '0.0.1', {requires: ['mojito-test', 'IndexMojit']});
+}, '0.0.1', {requires: ['mojito-test', 'HomeMojit']});

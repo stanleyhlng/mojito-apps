@@ -2,7 +2,7 @@
  * Copyright (c) 2012 Yahoo! Inc. All rights reserved.
  */
 
-YUI.add('IndexMojitModelFoo-tests', function(Y, NAME) {
+YUI.add('HomeMojitModelFoo-tests', function(Y, NAME) {
     
     var suite = new YUITest.TestSuite(NAME),
         model = null,
@@ -10,10 +10,10 @@ YUI.add('IndexMojitModelFoo-tests', function(Y, NAME) {
     
     suite.add(new YUITest.TestCase({
         
-        name: 'IndexMojitModelFoo user tests',
+        name: 'HomeMojitModelFoo user tests',
         
         setUp: function() {
-            model = Y.mojito.models.IndexMojitModelFoo;
+            model = Y.mojito.models.HomeMojitModelFoo;
         },
         tearDown: function() {
             model = null;
@@ -36,4 +36,4 @@ YUI.add('IndexMojitModelFoo-tests', function(Y, NAME) {
     
     YUITest.TestRunner.add(suite);
     
-}, '0.0.1', {requires: ['mojito-test', 'IndexMojitModelFoo']});
+}, '0.0.1', {requires: ['mojito-test', 'HomeMojitModelFoo']});
