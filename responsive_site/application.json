@@ -55,6 +55,13 @@
                         "config": {
                             "children": {
                                 "content-element": {
+                                    "config": {
+                                        "children": {
+                                            "breadcrumb-element": {
+                                                "type": "BreadcrumbElementMojit"
+                                            }
+                                        }
+                                    },
                                     "type": "ContentElementMojit"
                                 },
                                 "footer-element": {
@@ -100,6 +107,13 @@
                         "config": {
                             "children": {
                                 "content-element": {
+                                    "config": {
+                                        "children": {
+                                            "breadcrumb-element": {
+                                                "type": "BreadcrumbElementMojit"
+                                            }
+                                        }
+                                    },
                                     "type": "ContentElementMojit"
                                 },
                                 "footer-element": {

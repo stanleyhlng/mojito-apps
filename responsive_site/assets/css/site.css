@@ -10,6 +10,7 @@ a {
     text-decoration: none;
 }
 a:hover {
+    color: #ED145B;
     text-decoration: underline;
 }
 
@@ -55,6 +56,16 @@ a:hover {
     float: right;
     margin: 10px;
     width: 300px;
+}
+
+.breadcrumb {
+    border: 1px solid green;
+    font-size: 0.9em;   
+    text-transform: uppercase;
+}
+.breadcrumb a {
+    padding: 0 5px;
+    text-transform: uppercase;
 }
 
 .container {
