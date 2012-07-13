@@ -48,7 +48,7 @@ YUI.add('NavigationElementMojit', function(Y, NAME) {
     };
 
 
-    function  get_data(ac) {
+    function get_data(ac) {
         var data = {};
 
         var routes = {};

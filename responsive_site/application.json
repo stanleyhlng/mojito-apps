@@ -11,6 +11,7 @@
                             "css": [
                                 "/static/responsive_site/assets/css/reset.css",
                                 "/static/responsive_site/assets/css/bootstrap.css",
+                                "/static/responsive_site/assets/css/joyride.css",
                                 "/static/responsive_site/assets/css/site.css",
                                 "/static/responsive_site/assets/css/site-responsive.css"
                             ]
@@ -18,6 +19,7 @@
                         "bottom": {
                             "js": [
                                 "/static/responsive_site/assets/js/jquery.js",
+                                "/static/responsive_site/assets/js/joyride.js",
                                 "/static/responsive_site/assets/js/site.js"
                             ]
                         }
@@ -91,6 +93,16 @@
                                     },
                                     "type": "HeaderElementMojit"
                                 },
+                                "hidden-element": {
+                                    "config": {
+                                        "children": {
+                                            "pageguide-element": {
+                                                "type": "PageGuideElementMojit"
+                                            }
+                                        }
+                                    },
+                                    "type": "HiddenElementMojit"
+                                },
                                 "sidebar-element": {
                                     "type": "SidebarElementMojit"
                                 }
@@ -142,6 +154,16 @@
                                         }
                                     },
                                     "type": "HeaderElementMojit"
+                                },
+                                "hidden-element": {
+                                    "config": {
+                                        "children": {
+                                            "pageguide-element": {
+                                                "type": "PageGuideElementMojit"
+                                            }
+                                        }
+                                    },
+                                    "type": "HiddenElementMojit"
                                 },
                                 "sidebar-element": {
                                     "type": "SidebarElementMojit"
