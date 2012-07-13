@@ -34,7 +34,10 @@ YUI.add('SidebarElementMojit', function(Y, NAME) {
                     ac.error(err);
                     return;
                 }
-                ac.assets.addCss('./index.css');
+
+                data.info = {};
+                data.info.name = ac.intl.lang( "TITLE" );
+
                 ac.done({
                     status: 'Mojito is working.',
                     data: data
@@ -44,4 +47,4 @@ YUI.add('SidebarElementMojit', function(Y, NAME) {
 
     };
 
-}, '0.0.1', {requires: ['mojito', 'SidebarElementMojitModelFoo']});
+}, '0.0.1', {requires: ['mojito', 'mojito-intl-addon', 'SidebarElementMojitModelFoo']});

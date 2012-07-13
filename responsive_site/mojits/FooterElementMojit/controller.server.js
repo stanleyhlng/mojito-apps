@@ -41,10 +41,16 @@ YUI.add('FooterElementMojit', function(Y, NAME) {
                     data: data
                 });
                 */
-                ac.composite.done();
+
+                data.info = {};
+                data.info.name = ac.intl.lang( "TITLE" );
+
+                ac.composite.done({
+                    template: { data: data }
+                });
             });
         }
 
     };
 
-}, '0.0.1', {requires: ['mojito', 'FooterElementMojitModelFoo']});
+}, '0.0.1', {requires: ['mojito', 'mojito-intl-addon', 'FooterElementMojitModelFoo']});
