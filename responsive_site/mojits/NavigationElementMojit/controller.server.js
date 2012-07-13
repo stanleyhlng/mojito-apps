@@ -56,7 +56,7 @@ YUI.add('NavigationElementMojit', function(Y, NAME) {
         routes['about'] = ac.url.make( 'about-page', 'index' );
         routes['external'] = ac.url.make( 'external-page', 'index' );
 
-        var path = ac.http.getRequest().url;
+        var path = ac.http.getRequest().path;
         if ( path === routes['external'] ) {
 
             // navigation: external
@@ -84,16 +84,17 @@ YUI.add('NavigationElementMojit', function(Y, NAME) {
                 } else {
                     active = "";
                 }
+
+                var name = "menuitem_" + n;
+                name = ac.intl.lang( name.toUpperCase() );
                 data.items.push({
-                    'markup': '<li class="' + active + '"><a href="' + routes[n] + '">' + n + '</a></li>'
+                    'markup': '<li class="' + active + '"><a href="' + routes[n] + '">' + name + '</a></li>'
                 });
             } );
         }
-
-Y.log( data, "debug" );
 
         return data;
 
     }
 
-}, '0.0.1', {requires: ['mojito', 'NavigationElementMojitModelFoo']});
+}, '0.0.1', {requires: ['mojito', 'mojito-intl-addon', 'NavigationElementMojitModelFoo']});

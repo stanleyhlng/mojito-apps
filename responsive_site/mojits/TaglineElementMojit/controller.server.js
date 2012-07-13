@@ -34,7 +34,11 @@ YUI.add('TaglineElementMojit', function(Y, NAME) {
                     ac.error(err);
                     return;
                 }
-                ac.assets.addCss('./index.css');
+
+                data.info = {};
+                data.info.name = ac.intl.lang( "TITLE" );
+                data.info.content = ac.intl.lang( "CONTENT" );
+
                 ac.done({
                     status: 'Mojito is working.',
                     data: data
@@ -44,4 +48,4 @@ YUI.add('TaglineElementMojit', function(Y, NAME) {
 
     };
 
-}, '0.0.1', {requires: ['mojito', 'TaglineElementMojitModelFoo']});
+}, '0.0.1', {requires: ['mojito', 'mojito-intl-addon', 'TaglineElementMojitModelFoo']});

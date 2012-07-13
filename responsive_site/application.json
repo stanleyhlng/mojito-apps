@@ -2,6 +2,7 @@
     {
         "settings": [ "master" ],
         "appPort": 8666,
+        "cacheViewTemplates": false,
         "specs": {
             "site-layout": {
                 "config": {
