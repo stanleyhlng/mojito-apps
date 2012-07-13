@@ -53,12 +53,12 @@ YUI.add('BreadcrumbElementMojit', function(Y, NAME) {
         routes['about'] = ac.url.make( 'about-page', 'index' );
         routes['external'] = ac.url.make( 'external-page', 'index' );
 
-        var path = ac.http.getRequest().url;
+        var path = ac.http.getRequest().path;
         if ( path === routes['home'] ) {
             
             data.items = [];
             data.items.push({
-                'markup': '<a href="' + routes['home'] + '">home</a>'
+                'markup': '<a href="' + routes['home'] + '">' + ac.intl.lang( "MENUITEM_HOME" ) + '</a>'
             });
 
         } else if ( path === routes['about'] ) {
@@ -66,11 +66,11 @@ YUI.add('BreadcrumbElementMojit', function(Y, NAME) {
             data.items = [];
 
             data.items.push({
-                'markup': '<a href="' + routes['home'] + '">home</a> / '
+                'markup': '<a href="' + routes['home'] + '">' + ac.intl.lang( 'MENUITEM_HOME' ) + '</a> / '
             });
 
             data.items.push({
-                'markup': '<a href="' + routes['about'] + '">about</a>'
+                'markup': '<a href="' + routes['about'] + '">' + ac.intl.lang( 'MENUITEM_ABOUT' ) + '</a>'
             });
 
         }        
@@ -79,4 +79,4 @@ YUI.add('BreadcrumbElementMojit', function(Y, NAME) {
     }
 
 
-}, '0.0.1', {requires: ['mojito', 'BreadcrumbElementMojitModelFoo']});
+}, '0.0.1', {requires: ['mojito', 'mojito-intl-addon', 'BreadcrumbElementMojitModelFoo']});
