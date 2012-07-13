@@ -34,10 +34,17 @@ YUI.add('ContentElementMojit', function(Y, NAME) {
                     ac.error(err);
                     return;
                 }
-                ac.composite.done();
+
+                data.info = {};
+                data.info.name = ac.intl.lang( "TITLE" );
+                data.info.content = ac.intl.lang( "CONTENT" );
+
+                ac.composite.done({
+                    template: { data: data }
+                });
             });
         }
 
     };
 
-}, '0.0.1', {requires: ['mojito', 'ContentElementMojitModelFoo']});
+}, '0.0.1', {requires: ['mojito', 'mojito-intl-addon', 'ContentElementMojitModelFoo']});
