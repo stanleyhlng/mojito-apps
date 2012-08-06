@@ -1,0 +1,8 @@
+[{
+    "settings": [ "master" ],
+    "device": {
+        "verb": ["get"],
+        "path": "/",
+        "call": "device.index"
+    }
+}]

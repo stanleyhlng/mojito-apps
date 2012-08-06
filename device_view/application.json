@@ -1,0 +1,16 @@
+[
+    {
+        "settings": [ "master" ],
+        "specs": {
+            "device": {
+                "type": "DeviceMojit"
+            }
+        }
+    },
+    {
+        "settings": [ "environment:development" ],
+        "staticHandling": {
+            "forceUpdate": true
+        }
+    }
+]
