@@ -1,0 +1,29 @@
+[
+    {
+        "settings": [ "master" ],
+        "specs": {
+            "frame": {
+                "type": "HTMLFrameMojit",
+                "config": {
+                    "deploy": true,
+                    "child": {
+                        "type": "ScrollMojit"
+                    },
+                    "assets": {
+                        "top": {
+                            "css": [
+                                "/static/ScrollMojit/assets/index.css"
+                            ]
+                        }
+                    }
+                }
+            }
+        }
+    },
+    {
+        "settings": [ "environment:development" ],
+        "staticHandling": {
+            "forceUpdate": true
+        }
+    }
+]
