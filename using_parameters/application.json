@@ -1,0 +1,16 @@
+[
+    {
+        "settings": [ "master" ],
+        "specs": {
+            "framed": {
+                "type": "QueryMojit"
+            }
+        }
+    },
+    {
+        "settings": [ "environment:development" ],
+        "staticHandling": {
+            "forceUpdate": true
+        }
+    }
+]

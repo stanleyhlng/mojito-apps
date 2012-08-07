@@ -1,0 +1,30 @@
+[{
+    "settings": [ "master" ],
+    "root": {
+        "verbs": ["get"],
+        "path": "/",
+        "call": "framed.index"
+    },
+    "example1": {
+        "verbs": ["get"],
+        "path": "/example1",
+        "call": "framed.example1"
+    },
+    "example2": {
+        "verbs": ["get", "post"],
+        "path": "/example2",
+        "call": "framed.example2"
+    },
+    "example3": {
+        "verbs": ["get"],
+        "path": "/example3",
+        "call": "framed.example3",
+        "params": {"from":"routing", "foo":"bar", "bar":"foo"}
+    },
+    "example4": {
+        "verbs": ["get","post"],
+        "path": "/example4",
+        "call": "framed.example4",
+        "params": {"from":"routing", "foo3":"bar3"}
+    }
+}]
