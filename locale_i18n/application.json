@@ -1,0 +1,22 @@
+[
+    {
+        "settings": [ "master" ],
+        "specs": {
+            "frame": {
+                "type": "HTMLFrameMojit",
+                "config": {
+                    "deploy": true,
+                    "child": {
+                        "type": "i18nMojit"
+                    }
+                }
+            }
+        }
+    },
+    {
+        "settings": [ "environment:development" ],
+        "staticHandling": {
+            "forceUpdate": true
+        }
+    }
+]
