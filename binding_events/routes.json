@@ -1,0 +1,13 @@
+[{
+    "settings": [ "master" ],
+    "root": {
+        "verbs": ["get"],
+        "path": "/",
+        "call": "framed.index"
+    },
+    "perpage": {
+        "verbs": ["get"],
+        "path": "/?page=:page",
+        "call": "framed.index"
+    }
+}]
