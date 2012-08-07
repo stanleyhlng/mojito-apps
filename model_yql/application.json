@@ -1,0 +1,29 @@
+[
+    {
+        "settings": [ "master" ],
+        "specs": {
+            "framed": {
+                "type": "HTMLFrameMojit",
+                "config": {
+                    "deploy": true,
+                    "child": {
+                        "type": "FlickrMojit"
+                    },
+                    "assets": {
+                        "top": {
+                            "css": [
+                                "/static/FlickrMojit/assets/index.css"
+                            ]
+                        }
+                    }
+                }
+            }
+        }
+    },
+    {
+        "settings": [ "environment:development" ],
+        "staticHandling": {
+            "forceUpdate": true
+        }
+    }
+]
