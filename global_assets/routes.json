@@ -1,0 +1,8 @@
+[{
+    "settings": [ "master" ],
+    "framed": {
+        "call": "framed.index",
+        "path": "/",
+        "verbs": ["get"]
+    }
+}]
