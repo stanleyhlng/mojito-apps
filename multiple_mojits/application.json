@@ -1,0 +1,29 @@
+[
+    {
+        "settings": [ "master" ],
+        "specs": {
+            "parent": {
+                "type": "FrameMojit",
+                "config": {
+                    "children": {
+                        "header": {
+                            "type": "HeaderMojit"
+                        },
+                        "body": {
+                            "type": "BodyMojit"
+                        },
+                        "footer": {
+                            "type": "FooterMojit"
+                        }
+                    }
+                }
+            }
+        }
+    },
+    {
+        "settings": [ "environment:development" ],
+        "staticHandling": {
+            "forceUpdate": true
+        }
+    }
+]
