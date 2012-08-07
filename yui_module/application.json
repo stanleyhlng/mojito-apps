@@ -1,0 +1,23 @@
+[
+    {
+        "settings": [ "master" ],
+        "specs": {
+            "notepad": {
+                "type": "HTMLFrameMojit",
+                "config": {
+                    "deploy": true,
+                    "title": "Notepad Example",
+                    "child": {
+                        "type": "NotepadMojit"
+                    }
+                }
+            }
+        }
+    },
+    {
+        "settings": [ "environment:development" ],
+        "staticHandling": {
+            "forceUpdate": true
+        }
+    }
+]

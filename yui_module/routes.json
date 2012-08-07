@@ -1,0 +1,8 @@
+[{
+    "settings": [ "master" ],
+    "index": {
+        "call": "notepad.index",
+        "path": "/",
+        "verbs": ["get"]
+    }
+}]
