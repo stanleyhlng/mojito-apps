@@ -1,0 +1,21 @@
+[
+    {
+        "settings": [ "master" ],
+        "specs": {
+            "framed": {
+                "type": "HTMLFrameMojit",
+                "config": {
+                    "child": {
+                        "type": "CookieMojit"
+                    } 
+                }
+            }
+        }
+    },
+    {
+        "settings": [ "environment:development" ],
+        "staticHandling": {
+            "forceUpdate": true
+        }
+    }
+]
