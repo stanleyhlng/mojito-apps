@@ -4,7 +4,21 @@
         "specs": {
             "site-layout": {
                 "config": {
-                }
+                    "assets": {
+                        "top": {
+                            "css": [
+                                "/static/demo_news/assets/css/site.css"
+                            ]
+                        },
+                        "bottom": {
+                            "js": [
+                                "/static/demo_news/assets/js/site.js"
+                            ]
+                        }
+                    },
+                    "deploy": true
+                },
+                "type": "Microframe"
             }
         }
     },
