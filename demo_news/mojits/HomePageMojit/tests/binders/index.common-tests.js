@@ -1,7 +1,7 @@
 /*
  * Copyright (c) 2012 Yahoo! Inc. All rights reserved.
  */
-YUI.add('ListingPageMojitBinderIndex-tests', function(Y, NAME) {
+YUI.add('HomePageMojitBinderIndex-tests', function(Y, NAME) {
 
     var suite = new YUITest.TestSuite(NAME),
         binder,
@@ -9,10 +9,10 @@ YUI.add('ListingPageMojitBinderIndex-tests', function(Y, NAME) {
 
     suite.add(new YUITest.TestCase({
 
-        name: 'ListingPageMojit index binder tests',
+        name: 'HomePageMojit index binder tests',
 
         setUp: function() {
-            binder = Y.mojito.binders.ListingPageMojitBinderIndex;
+            binder = Y.mojito.binders.HomePageMojitBinderIndex;
         },
         tearDown: function() {
             binder = null;
@@ -34,4 +34,4 @@ YUI.add('ListingPageMojitBinderIndex-tests', function(Y, NAME) {
 
     YUITest.TestRunner.add(suite);
 
-}, '0.0.1', {requires: ['mojito-test', 'node', 'ListingPageMojitBinderIndex']});
+}, '0.0.1', {requires: ['mojito-test', 'node', 'HomePageMojitBinderIndex']});
