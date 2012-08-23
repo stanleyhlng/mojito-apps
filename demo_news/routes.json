@@ -1,4 +1,8 @@
 [{
-    "settings": [ "master" ]
-
+    "settings": [ "master" ],
+    "default-route": {
+        "verbs": ["get"],
+        "path": "/",
+        "call": "home-page.index"
+    }
 }]

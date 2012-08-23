@@ -25,15 +25,8 @@
                 "config": {
                     "title": "Home | Mojito App | Prototype",
                     "child": {
-                        "config": {
-                            "children": {
-                                "content-element": {
-                                    "type": "ListingElementMojit"
-                                }
-                            }
-                        }
-                    },
-                    "type": "HomePageMojit"
+                        "type": "HomePageMojit"
+                    }
                 }
             }
         }
