@@ -1,0 +1,25 @@
+{
+    "name": "demo_news",
+    "description": "My Mojito application",
+    "version": "0.0.1",
+    "author": {
+        "name": "Your Name",
+        "email": "nobody@yahoo-inc.com"
+    },
+    "contributors": [
+          {
+              "name": "Your Name",
+              "email": "nobody@yahoo-inc.com"
+          }
+    ],
+    "dependencies": {
+        "mojito": ">= 0.1.0",
+        "hotnode": "0.0.6"
+    },
+    "engines": {
+        "node": ">= 0.4.2 < 0.5.0"
+    },
+    "scripts": {
+        "start": "mojito start"
+    }
+}
