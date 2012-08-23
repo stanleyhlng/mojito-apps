@@ -36,7 +36,7 @@ YUI.add('ListingElementMojit', function(Y, NAME) {
                 }
                 ac.assets.addCss('./index.css');
                 ac.done({
-                    status: 'Mojito is working.',
+                    status: 'ListingElementMojit: Mojito is working.',
                     data: data
                 });
             });

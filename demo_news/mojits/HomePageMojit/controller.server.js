@@ -34,11 +34,14 @@ YUI.add('HomePageMojit', function(Y, NAME) {
                     ac.error(err);
                     return;
                 }
+                /*
                 ac.assets.addCss('./index.css');
-                ac.done({
+                ac.composite.done({
                     status: 'Mojito is working.',
                     data: data
                 });
+                */
+                ac.composite.done();
             });
         }
 
