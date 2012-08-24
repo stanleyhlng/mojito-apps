@@ -10,6 +10,8 @@ YUI.add('ListingElementMojit', function(Y, NAME) {
  * @module ListingElementMojit
  */
 
+	var util = require('util');
+
     /**
      * Constructor for the Controller class.
      *
@@ -38,16 +40,29 @@ YUI.add('ListingElementMojit', function(Y, NAME) {
                 ac.assets.addCss('./index.css');
                 ac.done({
                     status: 'ListingElementMojit: Mojito is working.',
-                    data: data
+                    data: util.inspect(data, true, null)
                 });
             });
 */
-            ac.done({
-                status: 'ListingElementMojit: Mojito is working.',
-                data: 'data' 
-            });
+			var data = {},
+				start = 0,
+				count = 5,
+				options = {
+					list_id: ac.app.config.custom.services.yql.params.list_id.stories
+				};
+
+			ac.models.ListingElementMojitModelYQL.getStories(options, start, count, function(err, data) { 
+				if (err) {
+					ac.error(err);
+					return;
+				}
+				ac.done({
+					status: 'ListingElementMojit: Mojito is working.',
+					data: util.inspect(data, true, null)
+				});
+			});
         }
 
     };
 
-}, '0.0.1', {requires: ['mojito', 'ListingElementMojitModelFoo']});
+}, '0.0.1', {requires: ['mojito', 'ListingElementMojitModelYQL']});
