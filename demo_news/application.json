@@ -36,12 +36,59 @@
                     }
                 }
             }
+        },
+        "staticHandling": {
+            "cache": false,
+            "forceUpdate": true,
+            "appName": "demo_news"
+        },
+        "custom": {
+            "services": {
+                "yql": {
+                    "host": "staging.media.query.yahoo.com",
+                    "port": "80",
+                    "version": "v1",
+                    "env": "",
+                    "url_format": {
+                        "get_stories_by_list_id": "SELECT * FROM media.content.ca.stories({start}, {count}) WHERE list_id={list_id.stories}",
+                        "get_stories_by_ids": "SELECT * FROM media.content.ca.stories WHERE ids={list_id.ids}"
+                    },
+                    "params": {
+                        "list_id": {
+                            "stories": "53b6c5bd-3a0e-426b-8163-492f4e038259"
+                        },
+                        "ids": {
+                            "stories": "3002a938-e0c7-37d9-8f9e-6f04e7f73870,3002a938-e0c7-37d9-8f9e-6f04e7f73870"
+                        },
+                        "start": 0,
+                        "count": 10
+                    }
+                }
+            }
         }
     },
     {
         "settings": [ "environment:development" ],
         "staticHandling": {
+            "cache": false,
             "forceUpdate": true
+        }
+    },
+    {
+        "settings": [ "lang:zh-Hant-HK" ],
+        "custom": {
+            "services": {
+                "yql": {
+                    "params": {
+                        "list_id": {
+                            "stories": "TBD"
+                        },
+                        "ids": {
+                            "stories": "TBD"
+                        }
+                    }
+                }
+            }
         }
     }
 ]

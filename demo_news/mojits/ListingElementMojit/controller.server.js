@@ -29,6 +29,7 @@ YUI.add('ListingElementMojit', function(Y, NAME) {
          *        to the Mojito API.
          */
         index: function(ac) {
+/*
             ac.models.ListingElementMojitModelFoo.getData(function(err, data) {
                 if (err) {
                     ac.error(err);
@@ -39,6 +40,11 @@ YUI.add('ListingElementMojit', function(Y, NAME) {
                     status: 'ListingElementMojit: Mojito is working.',
                     data: data
                 });
+            });
+*/
+            ac.done({
+                status: 'ListingElementMojit: Mojito is working.',
+                data: 'data' 
             });
         }
 
