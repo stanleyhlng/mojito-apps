@@ -12,7 +12,7 @@ YUI.add('ListingElementMojitModelYQL', function(Y, NAME) {
             callback(null, {some: 'data'});
         },
 
-		getStories: function(options, start, count, callback) {
+        getStories: function(options, start, count, callback) {
             console.log("get_stories");
 
             // validate options
@@ -57,6 +57,52 @@ YUI.add('ListingElementMojitModelYQL', function(Y, NAME) {
                     item = data.content;
                     items.push(item);
                 });
+                
+                callback(null, items);
+                return;
+
+            }, params, opts);
+            
+		},
+
+        getStory: function(options, callback) {
+            console.log("get_story");
+
+            // validate options
+            if (null === options || typeof options !== "object" || 0 === Object.keys(options).length) {
+                callback("invalid options", []);
+                return;
+            }
+
+            // construct yql query
+            var where = '';
+            var sep = "";
+            Object.keys(options).forEach(function(v) {
+                where += sep + v + '=' + '"' + options[v] + '"';
+                sep = '&';
+            });
+
+            var query = 'select * from media.content.ca.stories where ' + where + ';',
+                params = {'env': 'store://LsGqh48XKLlUgOMMzQLRYw'},
+                opts = {'base': ':/' + '/staging.media.query.yahoo.com/v1/public/yql?'};
+
+            console.log("INFO", "query", query);
+            console.log("INFO", "params", params);
+            console.log("INFO", "opts", opts);
+    
+            Y.YQL(query, function(response) {
+                console.log("INFO", "response", response);
+                
+                // validate response 
+                if (null === response || 0 === response.query.count) {
+                    callback("invalid response", []);
+                    return;
+                }
+
+                // process data
+                var items = [],
+                    item = null;
+                items.push(response.query.results.contents.content);
                 
                 callback(null, items);
                 return;

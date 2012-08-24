@@ -32,7 +32,7 @@ YUI.add('ListingElementMojitModelYQL-tests', function(Y, NAME) {
             A.isTrue(called);
         },
         
-        'test mojit model getStories': function() {
+        'test mojit model getStories list_id': function() {
             var called = false;
             A.isNotNull(model);
             A.isFunction(model.getStories);
@@ -46,7 +46,24 @@ YUI.add('ListingElementMojitModelYQL-tests', function(Y, NAME) {
 
             this.wait(function() {
                 A.isTrue(called);
-            }, 2000);
+            }, 3000);
+        },
+
+        'test mojito model getStories ids': function() {
+            var called = false;
+            A.isNotNull(model);
+            A.isFunction(model.getStory);
+            model.getStory({'ids':'da68b335-ee94-3a18-8ebe-6cb3c7b7cc45'}, function(err, data) {
+                console.log(err, data);
+
+                called = true; 
+                A.isTrue(!err);
+                A.isObject(data);
+            });
+
+            this.wait(function() {
+                A.isTrue(called);
+            }, 3000);
         }
 
     }));
