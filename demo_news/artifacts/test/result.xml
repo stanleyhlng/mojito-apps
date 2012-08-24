@@ -1,0 +1,1 @@
+<?xml version="1.0" encoding="UTF-8"?><testsuites><testsuite name="ListingElementMojitModelYQL user tests" tests="2" failures="0" time="2.009"><testcase name="test mojit model" time="0.001"></testcase><testcase name="test mojit model getStories" time="2.005"></testcase></testsuite></testsuites>
