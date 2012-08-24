@@ -81,7 +81,7 @@
                 "yql": {
                     "params": {
                         "list_id": {
-                            "stories": "TBD"
+                            "stories": "94419ba2-78ef-45ea-97a8-ee91a4a1cf2b"
                         },
                         "ids": {
                             "stories": "TBD"
@@ -90,5 +90,22 @@
                 }
             }
         }
-    }
+    },
+	{
+		"settings": [ "lang:ko-KR" ],
+		"custom": {
+			"services": {
+				"yql": {
+					"params": {
+						"list_id": {
+							"stories": "53b1f871-3254-4a78-b70b-caaca7565a56"
+						},
+						"ids": {
+							"stories": "TBD"
+						}
+					}
+				}
+			}
+		}
+	}
 ]

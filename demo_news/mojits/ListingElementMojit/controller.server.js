@@ -49,6 +49,10 @@ YUI.add('ListingElementMojit', function(Y, NAME) {
 				count = 5,
 				options = {
 					list_id: ac.app.config.custom.services.yql.params.list_id.stories
+				},
+				debug = {
+					device: ac.context.device,
+					lang: ac.context.lang
 				};
 
 			ac.models.ListingElementMojitModelYQL.getStories(options, start, count, function(err, data) { 
@@ -58,6 +62,8 @@ YUI.add('ListingElementMojit', function(Y, NAME) {
 				}
 				ac.done({
 					status: 'ListingElementMojit: Mojito is working.',
+					options: util.inspect(options, true, null),
+					debug: util.inspect(debug, true, null),
 					data: util.inspect(data, true, null)
 				});
 			});
